@@ -3,8 +3,8 @@ library(PoPS)
 library(terra)
 library(folderfun)
 
-setff("In", "H:/Shared drives/Data/Raster/Regional/SLF_1km/")
-setff("cals", "H:/Shared drives/APHIS  Projects/PoPS/Case Studies/spotted_latternfly/slf_data_redone_with_all_data_sources/calibration and assessment/actual_weights/")
+setff("In", "Q:/Shared drives/Data/Raster/Regional/SLF_1km/")
+setff("cals", "Q:/Shared drives/APHIS  Projects/PoPS/Case Studies/spotted_latternfly/slf_data_redone_with_all_data_sources/calibration and assessment/actual_weights/")
 
 infected_file <- ffIn("slf_2020.tif")
 host_file <- ffIn("toh.tif")
@@ -64,8 +64,8 @@ leaving_percentage <- 0.50
 leaving_scale_coefficient <- 3
 exposed_file <- ""
 mask <- NULL
-write_outputs = "None"
-output_folder_path = "C:/Users/Chris/Desktop/SLF_5year"
+write_outputs = "summary_outputs"
+output_folder_path = "C:/Users/cmjone25/Desktop/SLF_5year"
 
 means <- read.csv(ffcals("2019_means.csv"))
 means[5:6,] <- 0
